@@ -15,14 +15,8 @@ build: vectorAdd
 vectorAdd.o:vectorAdd.cu
 	$(NVCC) -o $@ -std=c++11 -c $<
 
-# $@: name of the file being generated
-# $<: the first prerequisite(usually source file)
-
 vectorAdd: vectorAdd.o
 	$(NVCC) -o $@ $+ 
-	
-# $^: the filenames of all prerequisites, with duplicate removed
-# $+: names of all prerequisites, including duplicates 
 	
 run: build
 	./vectorAdd
