@@ -8,4 +8,4 @@ CUDA Runtime API
 Vector Addition
 
 compile:
-nvcc --std c++11 vectorAdd.cu -o va
+make
