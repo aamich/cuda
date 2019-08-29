@@ -61,10 +61,11 @@ main(void)
     }
 
     // Initialize the host input vectors
+    // 1...n => 
     for (int i = 0; i < numElements; ++i)
     {
         h_A[i] = (float)i/(float)numElements;
-        h_B[i] = (float)i/(float)numElements;
+        h_B[i] = 1.f - (float)i/(float)numElements;
     }
 
     // host computation
